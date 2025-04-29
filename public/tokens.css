@@ -1,0 +1,15 @@
+:root {
+    --color-background: #232A2E;
+    --color-foreground: #D3C6AA;
+    --color-accent: #A7C080;
+    --color-header-background: #2D353B;
+    --color-header-foreground: #D3C6AA;
+}
+
+body.light-mode {
+    --color-background: #FEFBEF;
+    --color-foreground: #5C6A72;
+    --color-accent: #A7C080;
+    --color-header-background: #F8F5E4;
+    --color-header-foreground: #5C6A72;
+}

@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Roboto Mono", monospace;
+}
+
+header {
+    background-color: var(--color-header-background);
+    color: var(--color-header-foreground);
+    display: grid;
+    grid-template-columns: auto 1fr 50px;
+    gap: 1em;
+    align-items: center;
+    padding: 1em 3em;
+}
+
+nav {
+    display: flex;
+    gap: 1em;
+}
+
+
+header > button {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    header {
+        grid-template-columns: 1fr 50px 50px;
+    }
+
+    header > button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        grid-area: 2 / 1 / span 1 / span 2;
+    }
+}
+
+main {
+    padding: 1em 3em;
+}
+
+a {
+    color: var(--color-accent)
+}
+
+h1, h2 {
+    font-family: "DM Serif Display", serif;
+}
+
+dd, ul {
+    margin-left: 2.5em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+}
+
+.image {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.about-me {
+    grid-area: 1 / 2 / 1 / -1;
+}
+
+.contact {
+    grid-area: 2 / 1;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+
+.contact-grid dt {
+    font-weight: bold;
+    padding-right: 10px;
+}
+  
+.contact-grid dd {
+    margin-left: 0;
+}
